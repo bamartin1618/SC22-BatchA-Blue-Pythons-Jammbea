@@ -31,8 +31,8 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#home">Home</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#code-generator">Code Generator</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#team">Team</a></li>
-                        <button class="btn-toggle">Toggle Dark-Mode</button>
-                        <div class="toggle-btn-new" onclick="this.classList.toggle('active'); changeMode();">
+                        <!--<button class="btn-toggle">Toggle Dark-Mode</button Wait, dark mode should be working on the website before generating code. Does it work for you? Yeah it does. but not when code is gen--> 
+                        <div class="toggle-btn-new" onclick="this.classList.toggle('active'); changeMode();" id="toggle">
                           <i class="fas fa-sun" id="under-new" style="position:absolute; margin-left:1px; margin-top:1px;"></i>
                           <i class="fas fa-moon" id="under-new" style="margin-left:40px; position:absolute"></i>
                           <div class="inner-circle-new" id="top-new">
@@ -46,7 +46,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='/assets/img/newnew-header.jpg')}}" alt="..."style="width:50%;height:auto;"/>
+                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='/assets/img/Jammbea-logos_white.png')}}" alt="..."style="width:60%;height:auto; position:relative; top:80px;"/>
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Python Code Generator</h1>
                 <!-- Try Product Button-->
@@ -62,7 +62,7 @@
                     <div class="divider-custom-line"></div>
           </header>
         <!-- Product Description 1 Section-->
-        <section class="page-section portfolio" id="home">
+        <section class="page-section portfolio pd-background" id="home">
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Meet Jammbea</h2>
@@ -200,7 +200,7 @@
             </div>
         </section>
         <!-- Team Section-->
-        <section class="page-section" id="team">
+        <section class="page-section  team-background" id="team">
           <div class="container">
             <!-- Team Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-secondary">Meet the Team</h2>
@@ -271,11 +271,11 @@
               
               <div class="columnnew">
                 <div class="cardnew"> 
-                  <img src="{{ url_for('static', filename='/assets/img/portfolio/Untitled_1.png')}}" alt="Personx" style="width:80%; border-radius:50%;">
+                  <img src="{{ url_for('static', filename='/assets/img/portfolio/Aaron_1.png')}}" alt="Personx" style="width:80%; border-radius:50%;">
                   <div class="containernew">
                     <h2 class="biographytext">Aaron Nguy</h2>
                     <p class="titlenew">Backend Developer</p>
-                    <p class="biographytext">Some text that describes you.</p>
+                    <p class="biographytext">Soon-to-be 9th grader. I love python.</p>
                   </div>
                 </div>
               </div>
@@ -302,7 +302,7 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <h4 class="text-uppercase mb-4" style="color:white;">Location</h4>
                         <p class="lead mb-0">
                             2627 Hanover Street,
                             <br />
@@ -311,14 +311,14 @@
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <h4 class="text-uppercase mb-4" style="color:white;">Around the Web</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/aicampdotorg/?view_public_for=849707208732789"><i class="fab fa-fw fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/aicampofficial"><i class="fab fa-fw fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/aicamp1/"><i class="fab fa-fw fa-linkedin-in"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About AI Camp</h4>
+                        <h4 class="text-uppercase mb-4"  style="color:white;">About AI Camp</h4>
                         <p class="lead mb-0">
                             AI Camp is a summer camp for learning about Artificial Intelligence. Learn AI with zero coding experience. To learn more, visit 
                             <a href="https://www.ai-camp.org/">AI Camp</a>
@@ -353,7 +353,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 1.png')}}" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Our team searched for a dataset with quality python code. We knew that better data for training the AI would result in a better product. Finally, we found a dataset on Kaggle, containing more than enough code to train our model. </p>
+                                    <p class="mb-4">In the end, we used two datasets to train our AI. However, at first, our team searched for a dataset with quality python code. We knew that better data for training the AI would result in a better product. Finally, we found a dataset on Kaggle, containing more than enough code to train our model-or so we thought. The dataset, which was called the 150k Python Dataset from SRI-LAB, contained about 88 MB of Python code, but we took a smaller sample). In our evaluation, we found that quality was probably more important than quantity, as our dataset had contained too much OOP (Object-Oriented-Programming) which our model had a hard time understanding. <br> After our evaluation, we found the second dataset, which was called the english_python_data.txt. It contained only 1.1 MB of code, but had standard, simple Python code.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -385,7 +385,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 2.png')}}" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">For our project, our team had found a dataset full of Python code. However, all of the code was stored in nested folders. Using recursion in Python, we retrieved the data from the folders and concatenated it into a text file. We also tried doing this in the Linux Terminal. Next, we had to split the data into smaller parts because it was too large of a dataset. We used random in Python to get random samples of the data. Lastly, we found that our data had to be cleaned. Our team members worked together and removed the docstrings and comments from the code, using Python.</p>
+                                    <p class="mb-4">The code in the first dataset was stored in a series of nested folders. Using recursion in Python, we retrieved the data from the folders and concatenated it into a text file. We also tried doing this in the Linux Terminal. Next, we had to split the data into smaller parts because it was too large of a dataset. We used random in Python to get random samples of the data. <br> Lastly, we found that our data had to be cleaned. Our team members worked together and removed the docstrings and comments from the code, using the Python re (Regular Expression) module. The second dataset was cleaned the same way, but there was no need to concatenate separate files since it was already a .txt file. Then, we combined the two datasets to create a single, useable text file that could be used to train our model.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -417,7 +417,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 3.png')}}" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">The next step was to train the AI model. Since we used Aitextgen, a library in Python that is used to generate text, we only needed to fine tune our model using the training data that we gathered before. </p>
+                                    <p class="mb-4">The next step was to train the AI model. Since we used Aitextgen, a library in Python that is used to generate text, we only needed to fine tune our model using the training data that we gathered before. We chose the gpt-neo model because it is known to get generally good results. Also, we were restrained by the amount of RAM google Colab had, so we could only use a smaller model. We started off with the standard parameters and after seeing the results, we trained the model the second time with a better-processed dataset and different parameters that gave more useable results. We set the model to train for 12,000 steps. Our learning rate was set to 5e-3, and the AI generated text every 1000 steps. </p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -449,7 +449,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 4.png')}}" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">We tested out our AI Code Generator manually by entering different prompts in Google Colab. Based on the results, we processed the data again, and added more data. We found a better quality dataset, though it had less in quantity, and cleaned it, adding it to the original dataset. Then, we trained the AI, and re-evaluated. Finally, we used autopep8 as a python linter, which helped make the code look better.</p>
+                                    <p class="mb-4">We tested out our AI Code Generator manually by entering different prompts in Google Colab. Based on the results, we processed the data again, and added more data. We found the better quality dataset (previously mentioned as the "second dataset"), though it had less in quantity, and cleaned it, adding it to the original dataset. Then, we trained the AI, and re-evaluated. We used autopep8 as a python linter, which helped format the code.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -481,7 +481,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 5.png')}}" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">We created the website using Bootstrap and revised it in html code. Collaborating on Replit, we made the front-end of our product.</p>
+                                    <p class="mb-4">We created the website using Bootstrap and revised it in html code. More features were added, such as Prism.js which highlighted the output according to Python syntax, a working copy button, and a dark-mode toggle. Collaborating on Replit, and then on Cocalc, we made the front-end of our product.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -513,7 +513,9 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='/assets/img/portfolio/Step 6.gif')}}" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Using Flask, the website and the AI parts of our product were merged together. This is where we are now.</p>
+                                    <p class="mb-4">Using Flask, the website and the AI parts of our product were merged together. This is where we are now. In the future, we plan to add a python compiler so the user is able to run the code in the website without requiring them to copy the code and find a compiler of their own.
+We also will allow the dark mode to be saved automatically to the user's system, so the user only needs to change modes once instead of every time the website is reloaded. A plan is to test out more auto-correctors. We want the code to run every time, so we need a better corrector to adjust the outputted code. <br>
+With additional time, a good idea would be to clean the dataset more, by removing all of the code that had the potential to cause errors, so the model would train off of ONLY functioning code which would reduce the amount of mistakes and errors.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -539,12 +541,31 @@
         <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
         <script>
          // Select the button
-          const btn = document.querySelector(".btn-toggle");
+          const btn = document.querySelector(".toggle-btn-new");
           // Select the stylesheet <link>
           const theme = document.querySelector("#theme-link");
 
           // Listen for a click on the button
           btn.addEventListener("click", function() {
+            // If the current URL contains "styles.css"
+            if (theme.getAttribute("href") == "{{ url_for('static', filename='/css/styles.css')}}") {
+              // ... then switch it to "dark-theme.css"
+              theme.href = "{{ url_for('static', filename='/css/dark-mode.css')}}";
+            // Otherwise...
+            } else {
+              // ... switch it to "light-theme.css"
+              theme.href = "{{ url_for('static', filename='/css/styles.css')}}";
+            }
+          });
+            </script>
+          <script>
+         // Select the button
+          const btn_new = document.querySelector(".toggle-btn-new");
+          // Select the stylesheet <link>
+          const theme = document.querySelector("#theme-link");
+
+          // Listen for a click on the button it be dif
+          btn_new.addEventListener("click", function() {
             // If the current URL contains "styles.css"
             if (theme.getAttribute("href") == "{{ url_for('static', filename='/css/styles.css')}}") {
               // ... then switch it to "dark-theme.css"
